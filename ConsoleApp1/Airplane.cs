@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     public class Airplane
     {
-        public string StartCity { get; set; }
+        protected string StartCity { get; set; }
         protected string FinishCity { get; set; }
         protected MyDate StartDate { get; set; }
         protected MyDate FinishDate { get; set; }
