@@ -8,12 +8,15 @@ namespace ConsoleApp1
 {
     public class Airplane
     {
+        Exceptions Exception = new Exceptions();
         protected string StartCity { get; set; }
         protected string FinishCity { get; set; }
         protected MyDate StartDate { get; set; }
         protected MyDate FinishDate { get; set; }
         public Airplane(string startCity, string finishCity, MyDate startDate, MyDate finishDate)
         {
+            if (startCity == "" || finishCity == "")
+                Exception.IncorectIntDate();
             StartCity = startCity;
             FinishCity = finishCity;
             StartDate = startDate;

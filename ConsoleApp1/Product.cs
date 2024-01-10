@@ -8,6 +8,7 @@ namespace ConsoleApp1
 {
     public class Product
     {
+        Exceptions Exception = new Exceptions();
         protected string Name {  get; set; }
         protected float Price {  get; set; }
         protected Currency Cost {  get; set; }
@@ -16,13 +17,19 @@ namespace ConsoleApp1
         protected float Weight {  get; set; }
         public Product(string name, string price, Currency cost, int quantity, string producer, string weight)
         {
+            if (name == "" || price == "" || quantity < 0 || producer == "" || weight == "")
+                Exception.IncorectIntDate();
             Name = name;
             float.TryParse(price, out float Pricee);
+            if (Pricee < 0)
+                Exception.IncorectIntDate(); ;
             Price = Pricee;
             Cost = cost;
             Quantity = quantity;
             Producer = producer;
             float.TryParse(weight, out float Weightt);
+            if (Weightt < 0)
+                Exception.IncorectIntDate();
             Weight = Weightt;
         }
         public Product()
@@ -33,6 +40,27 @@ namespace ConsoleApp1
             Quantity = 1;
             Producer = "anonym";
             Weight = 1;
+        }
+        public Product(string name, string price)
+        {
+            Name = name;
+            if (name == "" || price == "")
+                Exception.IncorectIntDate();
+            float.TryParse(price, out float Pricee);
+            if (Pricee < 0)
+                Exception.IncorectIntDate();
+            Price = Pricee;
+        }
+        public Product(string name, string price, Currency cost)
+        {
+            if (name == "" || price == "")
+                Exception.IncorectIntDate();
+            Name = name;
+            float.TryParse(price, out float Pricee);
+            if (Pricee < 0)
+                Exception.IncorectIntDate();
+            Price = Pricee;
+            Cost = cost;
         }
         public Product(Product product) 
         {

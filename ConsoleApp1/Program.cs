@@ -8,9 +8,9 @@ Airplane airplane1 = new Airplane(airplane);
 Console.WriteLine(airplane.GetTotalTime());
 Console.WriteLine(airplane.IsArrivingToday());
 
-Currency dollar = new Currency("dollar", "38,50");
-Currency euro = new Currency("euro", "42,15");
-Currency pln = new Currency("pln", "9,50");
+Currency dollar = new Currency("USD", "38,50");
+Currency euro = new Currency("EUR", "42,15");
+Currency pln = new Currency("PLN", "9,50");
 Product product = new Product("phone","560,5",euro,120,"Samsung","130,2");
 Console.WriteLine(product.GetPriceInUAH());
 Console.WriteLine(product.GetTotalPriceInUAH());
