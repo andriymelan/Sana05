@@ -16,7 +16,7 @@ namespace ConsoleApp1
         public int Minute { get; protected set; }
         public MyDate(int year, int month, int day, int hour, int minute)
         {
-            if (year < 0 || 13 < month || month < 0 || day < 0 || day > 31 || hour < 0 || hour > 24 || minute < 0 || minute >60)
+            if (year < 0 || 12 < month || month < 1 || day < 1 || day > 31 || hour < 0 || hour > 23 || minute < 0 || minute > 59)
                 Exception.IncorectIntDate();
             Year = year;
             Month = month;
@@ -26,14 +26,14 @@ namespace ConsoleApp1
         }
         public MyDate(int month, int day)
         {
-            if (12 < month || month < 0 || day < 0 || day > 31)
+            if (12 < month || month < 1 || day < 1 || day > 31)
                 Exception.IncorectIntDate();
             Month = month;
             Day = day;
         }
         public MyDate(int day, int hour, int minute)
         {
-            if (day < 0 || day > 31 || hour < 0 || hour > 24 || minute < 0 || minute > 60)
+            if (day < 1 || day > 31 || hour < 0 || hour > 23 || minute < 0 || minute > 59)
                 Exception.IncorectIntDate();
             Day = day;
             Hour = hour;

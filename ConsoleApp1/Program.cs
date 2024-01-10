@@ -12,7 +12,7 @@ Currency dollar = new Currency("USD", "38,50");
 Currency euro = new Currency("EUR", "42,15");
 Currency pln = new Currency("PLN", "9,50");
 Product product = new Product("phone","560,5",euro,120,"Samsung","130,2");
+Product product1 = new Product(product);
 Console.WriteLine(product.GetPriceInUAH());
 Console.WriteLine(product.GetTotalPriceInUAH());
 Console.WriteLine(product.GetTotalWeight());
-Product product1 = new Product(product);

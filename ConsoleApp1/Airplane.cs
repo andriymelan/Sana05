@@ -31,6 +31,8 @@ namespace ConsoleApp1
         }
         public Airplane(string startCity, string finishCity)
         {
+            if (startCity == "" || finishCity == "")
+                Exception.IncorectIntDate();
             StartCity = startCity;
             FinishCity = finishCity;
         }
