@@ -35,6 +35,8 @@ namespace ConsoleApp1
                 Exception.IncorectIntDate();
             StartCity = startCity;
             FinishCity = finishCity;
+            StartDate = new MyDate();
+            FinishDate = new MyDate();
         }
         public Airplane(Airplane airplane)
         {

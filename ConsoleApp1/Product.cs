@@ -50,6 +50,10 @@ namespace ConsoleApp1
             if (Pricee < 0)
                 Exception.IncorectIntDate();
             Price = Pricee;
+            Cost = new Currency();
+            Quantity = 1;
+            Producer = "NM";
+            Weight = 1;
         }
         public Product(string name, string price, Currency cost)
         {
@@ -61,6 +65,9 @@ namespace ConsoleApp1
                 Exception.IncorectIntDate();
             Price = Pricee;
             Cost = cost;
+            Quantity = 1;
+            Producer = "NM";
+            Weight = 1;
         }
         public Product(Product product) 
         {

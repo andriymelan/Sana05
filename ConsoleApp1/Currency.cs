@@ -36,6 +36,7 @@ namespace ConsoleApp1
             if (name == "")
                 Exception.IncorectIntDate();
             Name = name;
+            ExRate = 1;
         }
     }
 }

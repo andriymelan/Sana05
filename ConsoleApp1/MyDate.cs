@@ -30,6 +30,9 @@ namespace ConsoleApp1
                 Exception.IncorectIntDate();
             Month = month;
             Day = day;
+            Year = 2000;
+            Hour = 0;
+            Minute = 0;
         }
         public MyDate(int day, int hour, int minute)
         {
@@ -38,6 +41,8 @@ namespace ConsoleApp1
             Day = day;
             Hour = hour;
             Minute = minute;
+            Year = 2000;
+            Month = 1;
         }
         public MyDate()
         {
