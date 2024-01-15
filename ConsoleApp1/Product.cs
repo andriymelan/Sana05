@@ -66,7 +66,7 @@ namespace ConsoleApp1
         {
             Name = product.Name;
             Price = product.Price;
-            Cost = product.Cost;
+            Cost = new Currency(product.Cost);
             Quantity = product.Quantity;
             Producer = product.Producer;
             Weight = product.Weight;

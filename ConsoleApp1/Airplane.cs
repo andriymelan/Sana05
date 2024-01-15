@@ -40,8 +40,8 @@ namespace ConsoleApp1
         {
             StartCity = airplane.StartCity;
             FinishCity = airplane.FinishCity;
-            StartDate = airplane.StartDate;
-            FinishDate = airplane.FinishDate;
+            StartDate = new MyDate(airplane.StartDate);
+            FinishDate = new MyDate(airplane.FinishDate);
         }
         public TimeSpan GetTotalTime()
         {
